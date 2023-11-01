@@ -1,0 +1,12 @@
+type Todo = record {
+    "id": nat;
+    "task": text;
+};
+
+service : {
+    add_todo: (text) -> ();
+    delete_todo: (nat) -> ();
+    get_todos: () -> (vec Todo);
+    update_todo: (Todo) -> ();
+    whoami: () -> (text);
+}
